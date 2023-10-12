@@ -231,8 +231,7 @@ aside {
     color: rgba(5, 2, 21, 0.75);
     font-size: 18px;
     font-weight: 400;
-    line-height: 30px; /* 32.31px */
-    text-align: justify;
+    line-height: 30px;
 }
 .btn {
     display: inline;
