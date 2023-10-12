@@ -215,6 +215,21 @@ aside {
 .img__cont img {
     height: 80vh;
 }
+/* Social link */
+.social-link {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 50px 0;
+}
+.social-link a {
+    color: #050215;
+    font-size: 14px;
+    font-weight: 500;
+}
+.social-link a:hover,
+.social-link a:focus {
+    color: #b4977b;
+}
 .info {
     max-width: 730px;
     display: flex;
