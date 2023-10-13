@@ -288,11 +288,28 @@ aside {
     text-shadow: 2px 0 #b4977b, -2px 0 #b4977b, 0 2px #b4977b, 0 -2px #b4977b,
         1px 1px #b4977b, -1px -1px #b4977b, 1px -1px #b4977b, -1px 1px #b4977b;
 }
+/* Main end */
+
+/* Hamburger */
+.hamburger {
+    position: fixed;
+    top: 35px;
+    right: 35px;
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+}
 @media only screen and (max-width: 1110px) {
     /* Aside start */
-    .logo {
-        font-size: 24px;
-    }
     aside {
         width: 10%;
     }
@@ -300,6 +317,9 @@ aside {
         width: 100%;
         height: 60%;
         margin-top: 80px;
+    }
+    .logo {
+        font-size: 24px;
     }
     #scroll {
         width: 3px;
@@ -354,5 +374,176 @@ aside {
     .number__indc {
         bottom: -30px;
         font-size: 150px;
+    }
+    /* Hamburger */
+    .hamburger {
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .navbar {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        gap: 0;
+        flex-direction: column;
+        background-color: #b4977b;
+        width: 100%;
+        text-align: center;
+        transition: 0.5s;
+    }
+    .nav__item {
+        margin: 16px 0;
+    }
+    .navbar.active {
+        left: 0;
+    }
+    /* Navbar */
+    nav {
+        top: 0;
+        margin-left: 0;
+        padding: 0;
+    }
+    .navbar {
+        max-width: 100%;
+        height: 100vh;
+        gap: 0;
+        margin-right: 0;
+    }
+    .nav__item a {
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .nav__item .active {
+        color: #fff;
+        display: block;
+        margin-top: 100px;
+    }
+    .nav__item a:hover,
+    .nav__item a:focus {
+        color: #fff;
+    }
+    .cart {
+        margin-left: 0px;
+    }
+}
+/* Media 750px  */
+@media only screen and (max-width: 750px) {
+    /* Aside start */
+    aside {
+        width: 15%;
+    }
+    .aside_contianer {
+        height: 55%;
+        margin-top: 130px;
+    }
+    .logo {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .current {
+        font-size: 40px;
+    }
+    .total {
+        font-size: 40px;
+    }
+    .next img {
+        width: 35px;
+    }
+    /* Aside end */
+
+    /* Main start */
+    .main__container {
+        overflow: hidden;
+        width: 75%;
+    }
+    .slide {
+        width: 85%;
+        padding: 0 0 0 70px;
+    }
+    .slide__contianer {
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+    }
+    .img__cont .image-box {
+        width: 430px;
+        height: 40vh;
+        background-position: center;
+    }
+    /* Social link */
+    .social-link {
+        display: none;
+    }
+    .info {
+        max-width: 100%;
+        flex-direction: column;
+        gap: 22px;
+    }
+    .title {
+        font-size: 37px;
+    }
+    .description {
+        font-size: 16px;
+        line-height: 25px;
+    }
+    /* button */
+    .btn {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+    /* Number */
+    .number__indc {
+        bottom: -70px;
+        font-size: 150px;
+    }
+    /* Main end */
+}
+/* Media 540px  */
+@media only screen and (max-width: 540px) {
+    /* Aside start */
+    .logo {
+        font-size: 18px;
+    }
+    .current {
+        font-size: 35px;
+    }
+    .total {
+        font-size: 35px;
+    }
+    .next img {
+        width: 35px;
+    }
+    /* Aside end */
+
+    /* Main start */
+    .main__container {
+        overflow: hidden;
+        width: 80%;
+    }
+    .slide {
+        padding: 0 0 0 40px;
+    }
+    .img__cont .image-box {
+        width: 400px;
+    }
+    /* Number */
+    .number__indc {
+        bottom: -60px;
+        right: 30px;
+        font-size: 120px;
+    }
+    /* Main end */
+
+    /* Hamburger */
+    .bar {
+        background-color: white;
     }
 }
